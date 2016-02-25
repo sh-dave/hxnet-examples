@@ -1,8 +1,11 @@
-# hxnet-examples
-
+# services
 ## websocket_echo_service
 - [cpp / neko] simple echo service, just gives you back what you tell it
 
+## websocket_chat_service
+- [cpp / neko] simple chat service, just broadcasts messages to all connected clients
+
+# clients
 ## websocket_console_client
 - [cpp / neko] console client for websocket_echo_service
  
