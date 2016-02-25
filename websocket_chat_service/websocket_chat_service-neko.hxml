@@ -1,0 +1,4 @@
+-cp src
+-neko bin/websocket_chat_service-neko.n
+-main Main
+-lib hxnet
