@@ -11,29 +11,7 @@ import flash.text.TextFieldType;
 import flash.text.TextFormat;
 import flash.utils.Timer;
 import haxe.io.Bytes;
-import hxnet.protocols.WebSocket;
 import hxnet.tcp.Client;
-
-class ClientProtocol extends WebSocket {
-	var output : TextField;
-
-	public function new( output : TextField ) {
-		super();
-		this.output = output;
-	}
-
-	override function recvText( text : String ) {
-		trace('recvtext');
-		output.text += '\n';
-		output.text += 't> ${text}';
-	}
-
-	override function recvBinary( data : Bytes ) {
-		trace('recvbinary');
-		output.text += '\n';
-		output.text += 'b> ${data.toString()}';
-	}
-}
 
 class Main {
 	static function main() {
@@ -62,8 +40,6 @@ class Main {
 
 		stage.addChild(log);
 
-		var protocol = new ClientProtocol(log);
-
 		var input = new TextField();
 		input.type = TextFieldType.INPUT;
 		input.y = stage.stageHeight - 62;
@@ -73,6 +49,17 @@ class Main {
 		//input.text = 'type here';
 		input.border = true;
 		input.borderColor = 0x000000;
+
+		var protocol = new common.ClientProtocol(
+			function( text : String ) {
+				log.text += '\n';
+				log.text += 't> ${text}';
+			},
+			function( data : Bytes ) {
+				log.text += '\n';
+				log.text += 'b> ${data.toString()}';
+			}
+		);
 
 		input.addEventListener(KeyboardEvent.KEY_DOWN, function( event : KeyboardEvent ) {
 			switch (event.charCode) {

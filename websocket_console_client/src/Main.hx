@@ -11,20 +11,19 @@ import haxe.io.Bytes;
 import hxnet.protocols.WebSocket;
 import hxnet.tcp.Client;
 
-class ClientProtocol extends WebSocket {
-	override function recvText( text : String ) {
-		Sys.println('t> ${text}');
-	}
-
-	override function recvBinary( data : Bytes ) {
-		Sys.println('b> ${data.toString()}');
-	}
-}
-
 class Main {
 	public static function main() {
 		var client = new Client();
-		var protocol = new ClientProtocol();
+
+		var protocol = new common.ClientProtocol(
+			function( text : String ) {
+				Sys.println('t> ${text}');
+			},
+			function( data : Bytes ) {
+				Sys.println('b> ${data.toString()}');
+			}
+		);
+
 		client.protocol = protocol;
 		client.connect('localhost', 54321);
 		client.blocking = false;

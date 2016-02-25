@@ -24,7 +24,7 @@
     <option noInlineOnDebug="False" />
     <option mainClass="Main" />
     <option enabledebug="False" />
-    <option additional="-lib hxnet" />
+    <option additional="-lib hxnet&#xA;-cp .." />
   </build>
   <!-- haxelib libraries -->
   <haxelib>

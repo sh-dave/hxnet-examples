@@ -2,3 +2,4 @@
 -cpp bin
 -main Main
 -lib hxnet
+-cp ..
