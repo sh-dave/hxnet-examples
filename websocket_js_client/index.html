@@ -1,12 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 	<head>
 		<title>websocket_js_client</title>
+		<style>
+			body, html {
+				//width : 80%;
+				height : 80%;
+			}
+		</style>
 	</head>
 	<body>
-		<textarea id="logarea" readonly="true"></textarea>
-		<input id="inputline" placeholder="type here" />
-		<button id="closeConnection">close socket</button>
+		<div>
+			<textarea id="logarea" readonly="true" style="width:99%;height:256px;"></textarea><br/>
+			<input id="inputline" style="width:99%" placeholder="type here and press [enter] to send" /><br/>
+			<button id="closeConnection" style="float:right;">close socket</button>
+		</div>
 
 		<!-- script has to come last as it accesses the elements above-->
 		<script src="bin/websocket_js_client.js"></script>
