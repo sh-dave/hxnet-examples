@@ -1,0 +1,4 @@
+-cp src
+-neko bin/websocket_echo_service-neko.n
+-main Main
+-lib hxnet

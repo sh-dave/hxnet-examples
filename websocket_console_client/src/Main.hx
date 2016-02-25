@@ -1,6 +1,12 @@
 package;
 
+#if cpp
 import cpp.vm.Thread;
+#end
+#if neko
+import neko.vm.Thread;
+#end
+
 import haxe.io.Bytes;
 import hxnet.protocols.WebSocket;
 import hxnet.tcp.Client;

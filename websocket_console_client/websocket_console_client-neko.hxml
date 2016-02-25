@@ -1,0 +1,4 @@
+-cp src
+-neko bin/websocket_console_client-neko.n
+-main Main
+-lib hxnet
