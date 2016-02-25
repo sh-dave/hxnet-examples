@@ -1,0 +1,5 @@
+-cp src
+-js bin/websocket_js_client.js
+-main Main
+-lib hxnet
+-cp ..
