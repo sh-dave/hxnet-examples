@@ -1,19 +1,6 @@
-# services
-## websocket_echo_service
-- [cpp / neko] simple echo service, just gives you back what you tell it
+# chat-echo-example
+- echo and very simple chat examples
 
-## websocket_chat_service
-- [cpp / neko] simple chat service, just broadcasts messages to all connected clients
-
-# clients
-## websocket_console_client
-- [cpp / neko] console client for websocket_echo_service
- 
-## websocket_flash_client
-- [flash] client for websocket_echo_server with fancy *cough* *cough* gui :sweat_smile:
-- requires: https://github.com/sh-dave/hxnet (or https://github.com/sh-dave/hxnet/tree/js-wsclient)
-
-## websocket_js_client
-- [html / js] client running with js in a html page
-- uses a custom hxnet.ws.Client
-- requires: https://github.com/sh-dave/hxnet/tree/js-wsclient
+# quads-example
+- movable quads, yay!
+- start one of the services and multiple client
