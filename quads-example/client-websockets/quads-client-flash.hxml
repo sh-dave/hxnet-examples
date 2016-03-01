@@ -1,0 +1,8 @@
+-cp src
+-swf bin/quads-client-flash.swf
+-swf-header 800:600:30:FFFFFF
+-swf-version 16.0
+-main MainFlash
+-lib hxnet
+-lib mphxnet
+-lib hxnet-examples-quads

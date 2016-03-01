@@ -1,0 +1,6 @@
+-cp src
+-neko bin/quads-service-neko.n
+-main Main
+-lib hxnet
+-lib mphxnet
+-lib hxnet-examples-quads

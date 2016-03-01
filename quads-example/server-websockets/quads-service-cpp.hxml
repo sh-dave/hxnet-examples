@@ -1,0 +1,6 @@
+-cp src
+-cpp bin
+-main Main
+-lib hxnet
+-lib mphxnet
+-lib hxnet-examples-quads
